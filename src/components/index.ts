@@ -7,6 +7,7 @@ import TextInputCompt from './common/TextInputCompt';
 import ReviewCard from './cards/ReviewCard';
 import RatingsCard from './cards/RatingsCard';
 import PlansCard from './cards/PlansCard';
+import IdeaCard from './cards/IdeaCard';
 
 export {
   ActivityCard,
@@ -17,5 +18,6 @@ export {
   TextInputCompt,
   ReviewCard,
   RatingsCard,
-  PlansCard
+  PlansCard,
+  IdeaCard
 };

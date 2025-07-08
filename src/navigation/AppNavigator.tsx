@@ -6,18 +6,20 @@ import {
   ActivitiesReadyScreen,
   AlreadyAccount,
   GetStart,
-  PakagesScreen,
+  PackageScreen,
   SearchingActivitiesScreen,
   SplashScreen,
   WelcomeScreen,
 } from '../screens';
+import BottomTabNavigator from './BottomTabNavigator';
+import BrowseScreen from '../screens/browse/BrowseScreen';
 
 const Stack = createNativeStackNavigator();
 
 const AppNavigator = () => {
   return (
     <Stack.Navigator
-      initialRouteName={ROUTE_NAMES.SPLASH}
+      initialRouteName={ROUTE_NAMES.BOTTOMTABS}
       screenOptions={{
         headerShown: false,
       }}>
@@ -38,8 +40,12 @@ const AppNavigator = () => {
         component={ActivitiesReadyScreen}
       />
       <Stack.Screen
-        name={ROUTE_NAMES.PAKAGESSCREEN}
-        component={PakagesScreen}
+        name={ROUTE_NAMES.PackageScreen}
+        component={PackageScreen}
+      />
+      <Stack.Screen
+        name={ROUTE_NAMES.BOTTOMTABS}
+        component={BottomTabNavigator}
       />
     </Stack.Navigator>
   );

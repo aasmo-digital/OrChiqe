@@ -4,7 +4,7 @@ import GetStart from './getstart/GetStartScreen';
 import SearchingActivitiesScreen from './searchingactivities/SearchingActivitiesScreen';
 import ActivitiesReadyScreen from './activitiesready/ActivitiesReadyScreen';
 import AlreadyAccount from './alreadyAccount/AlreadyAccount';
-import PakagesScreen from './packages/PakagesScreen';
+import PackageScreen from './packages/PackageScreen';
 export {
   SplashScreen,
   WelcomeScreen,
@@ -12,5 +12,5 @@ export {
   SearchingActivitiesScreen,
   ActivitiesReadyScreen,
   AlreadyAccount,
-  PakagesScreen
+  PackageScreen,
 };

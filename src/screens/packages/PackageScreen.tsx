@@ -22,6 +22,7 @@ import {
 } from '../../components'; // Assuming your button component
 import styles from './packages.styles';
 import {PLANS_DATA, REVIEWS_DATA} from './packages.const';
+import {ROUTE_NAMES} from '../../constants/routes';
 
 // --- Sub-Components ---
 
@@ -33,8 +34,20 @@ const BenefitItem = ({text}: any) => (
 );
 
 // --- Main Screen Component ---
-const PakagesScreen = () => {
+const PackageScreen = ({navigation}) => {
   const [selectedPlanId, setSelectedPlanId] = useState('ultimate');
+
+  // const [selectedPlanId, setSelectedPlanId] = useState(null);
+  const [sortedPlans, setSortedPlans] = useState(PLANS_DATA);
+
+  const handleSelectPlan = planId => {
+    setSelectedPlanId(planId);
+
+    const selected = PLANS_DATA.find(p => p.id === planId);
+    const rest = PLANS_DATA.filter(p => p.id !== planId);
+
+    setSortedPlans([selected, ...rest]);
+  };
 
   return (
     <SafeAreaView style={styles.container}>
@@ -57,17 +70,22 @@ const PakagesScreen = () => {
 
         {/* Plans Section */}
         <Text style={styles.investTitle}>Invest In Your Time With Kids</Text>
-        <View style={styles.plansContainer}>
-          {PLANS_DATA.map(plan => (
-            <PlansCard
-              key={plan.id}
-              plan={plan}
-              isSelected={selectedPlanId === plan.id}
-              onSelect={() => setSelectedPlanId(plan.id)}
-            />
-          ))}
+        <View>
+          <FlatList
+            data={sortedPlans}
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            keyExtractor={item => item.id.toString()}
+            renderItem={({item}) => (
+              <PlansCard
+                plan={item}
+                isSelected={selectedPlanId === item.id}
+                // onSelect={() => setSelectedPlanId(item.id)}
+                onSelect={() => handleSelectPlan(item.id)}
+              />
+            )}
+          />
         </View>
-
         {/* Customer Stories Section */}
         <Text style={styles.sectionTitle}>Customer Stories</Text>
         <FlatList
@@ -80,7 +98,7 @@ const PakagesScreen = () => {
         />
 
         {/* Ratings Section */}
-        <RatingsCard />
+        {/* <RatingsCard /> */}
       </ScrollView>
 
       {/* Sticky Footer Buttons */}
@@ -95,7 +113,7 @@ const PakagesScreen = () => {
           title="I've Already Purchased"
           style={styles.purchasedButton}
           textStyle={styles.purchasedButtonText}
-          onPress={() => Alert.alert('----')}
+          onPress={() => navigation.navigate(ROUTE_NAMES.ALREADY_ACCOUNT)}
         />
         <Text style={styles.cancelText}>Cancel Anytime</Text>
         <View style={styles.footerLinks}>
@@ -113,4 +131,4 @@ const PakagesScreen = () => {
   );
 };
 
-export default PakagesScreen;
+export default PackageScreen;

@@ -109,7 +109,7 @@ const ActivitiesReadyScreen = () => {
     // Navigate to the main app Home Screen
     navigation.reset({
       index: 0,
-      routes: [{name: ROUTE_NAMES.PAKAGESSCREEN}],
+      routes: [{name: ROUTE_NAMES.PackageScreen}],
     });
   };
 

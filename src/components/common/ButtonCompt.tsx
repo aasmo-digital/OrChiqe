@@ -29,6 +29,7 @@ const ButtonCompt: React.FC<ButtonComptProps> = ({
 }) => {
   return (
     <TouchableOpacity
+      activeOpacity={0.7}
       style={[styles.ButtonCompt, style]}
       onPress={onPress}
       // disabled={disabled}

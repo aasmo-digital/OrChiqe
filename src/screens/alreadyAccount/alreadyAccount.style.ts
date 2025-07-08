@@ -53,11 +53,11 @@ const styles = StyleSheet.create({
   },
   loginButton: {
     // This style is for the enabled button, using your reusable Button component
-    backgroundColor: Colors.black,
+    backgroundColor: Colors.accentOrange,
   },
   disabledButton: {
     // This style overrides the default when the button is disabled
-    backgroundColor: '#E9E9E9', // The light gray from your design
+    backgroundColor:Colors.accentOrange, // The light gray from your design
     elevation: 0, // Remove shadow on disabled button for Android
     shadowOpacity: 0, // Remove shadow on disabled button for iOS
   },

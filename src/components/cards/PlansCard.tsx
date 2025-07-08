@@ -1,11 +1,12 @@
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import React, { memo } from 'react';
+import React, {memo} from 'react';
 import MaterialCommunityIcon from 'react-native-vector-icons/MaterialCommunityIcons'; // For hearts
-import {FontFamily} from '../../constants';
+import {Colors, FontFamily} from '../../constants';
 import Icon from 'react-native-vector-icons/FontAwesome'; // For stars
 
 const PlansCard = ({plan, isSelected, onSelect}: any) => {
   const priceParts = plan.price.toFixed(2).toString().split('.');
+  
   return (
     <TouchableOpacity
       onPress={onSelect}
@@ -56,15 +57,15 @@ export default memo(PlansCard);
 
 const styles = StyleSheet.create({
   planCard: {
-    flex: 1,
-    backgroundColor: 'white',
+    // flex: 1,
     borderRadius: 20,
     padding: 15,
     marginHorizontal: 5,
-    borderWidth: 2,
-    borderColor: 'transparent',
+    borderWidth: 1,
+    borderColor: Colors.grayDark,
+    marginVertical:10
   },
-  selectedPlanCard: {borderColor: '#007AFF'},
+  selectedPlanCard: {borderColor: Colors.accentOrange},
   checkWrapper: {position: 'absolute', top: -12, right: -12},
   bestValueBanner: {
     position: 'absolute',
@@ -80,11 +81,15 @@ const styles = StyleSheet.create({
   planTitle: {
     fontFamily: FontFamily.Bold,
     fontSize: 16,
-    color: '#0B3A4A',
+    color: Colors.white,
     marginBottom: 15,
   },
   featureItem: {flexDirection: 'row', alignItems: 'center', marginBottom: 8},
-  featureText: {fontFamily: FontFamily.Regular, fontSize: 12, color: '#333'},
+  featureText: {
+    fontFamily: FontFamily.Regular,
+    fontSize: 12,
+    color: Colors.grayLight,
+  },
   featureUnavailable: {textDecorationLine: 'line-through', color: '#aaa'},
   priceContainer: {
     flexDirection: 'row',
@@ -94,20 +99,24 @@ const styles = StyleSheet.create({
   priceCurrency: {
     fontFamily: FontFamily.Bold,
     fontSize: 14,
-    color: '#0B3A4A',
+    color: Colors.success,
     marginTop: 4,
   },
-  priceAmount: {fontFamily: FontFamily.Bold, fontSize: 32, color: '#0B3A4A'},
+  priceAmount: {
+    fontFamily: FontFamily.Bold,
+    fontSize: 32,
+    color: Colors.success,
+  },
   priceCents: {
     fontFamily: FontFamily.Bold,
     fontSize: 14,
-    color: '#0B3A4A',
+    color: Colors.success,
     marginTop: 4,
   },
   priceNote: {
     fontFamily: FontFamily.Regular,
     fontSize: 12,
-    color: '#666',
+    color: Colors.grayLight,
     alignSelf: 'flex-end',
     marginLeft: 4,
     marginBottom: 5,
@@ -115,7 +124,7 @@ const styles = StyleSheet.create({
   monthlyEquivalent: {
     fontFamily: FontFamily.Regular,
     fontSize: 12,
-    color: '#007AFF',
+    color: Colors.success,
     marginTop: 4,
   },
 });

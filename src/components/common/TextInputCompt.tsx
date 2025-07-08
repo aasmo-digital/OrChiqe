@@ -103,8 +103,8 @@ const styles = StyleSheet.create({
     borderColor: 'red',
   },
   errorText: {
-    color: 'red',
-    fontSize: 13,
+    color: Colors.white,
+    fontSize: 14,
     marginTop: 4,
     marginLeft: 4,
     fontFamily: FontFamily.Regular,

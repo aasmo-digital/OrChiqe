@@ -33,11 +33,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginVertical: 20,
   },
-  plansContainer: {
-    flexDirection: 'row',
-    paddingHorizontal: 20,
-    justifyContent: 'space-between',
-  },
+  
 
   sectionTitle: {
     fontFamily: FontFamily.Bold,
