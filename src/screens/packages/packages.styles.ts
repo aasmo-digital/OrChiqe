@@ -1,13 +1,12 @@
-import { StyleSheet } from 'react-native'
-import { FontFamily } from '../../constants';
-
+import {StyleSheet} from 'react-native';
+import {Colors, FontFamily} from '../../constants';
 
 // --- Styles ---
 const styles = StyleSheet.create({
-  container: {flex: 1, backgroundColor: '#F0F4F7'},
+  container: {flex: 1, backgroundColor: Colors.primary},
   heroSection: {
     flexDirection: 'row',
-    backgroundColor: 'white',
+    backgroundColor: Colors.primary,
     padding: 20,
     borderBottomLeftRadius: 30,
     borderBottomRightRadius: 30,
@@ -16,7 +15,7 @@ const styles = StyleSheet.create({
   heroTitle: {
     fontFamily: FontFamily.Bold,
     fontSize: 22,
-    color: '#0B3A4A',
+    color: Colors.white,
     marginBottom: 15,
   },
   heroImage: {width: 150, height: 150, resizeMode: 'contain'},
@@ -24,13 +23,13 @@ const styles = StyleSheet.create({
   benefitText: {
     fontFamily: FontFamily.SemiBold,
     fontSize: 16,
-    color: '#0B3A4A',
+    color: Colors.white,
     marginLeft: 10,
   },
   investTitle: {
     fontFamily: FontFamily.Bold,
     fontSize: 18,
-    color: '#0B3A4A',
+    color: Colors.white,
     textAlign: 'center',
     marginVertical: 20,
   },
@@ -39,130 +38,32 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     justifyContent: 'space-between',
   },
-  planCard: {
-    flex: 1,
-    backgroundColor: 'white',
-    borderRadius: 20,
-    padding: 15,
-    marginHorizontal: 5,
-    borderWidth: 2,
-    borderColor: 'transparent',
-  },
-  selectedPlanCard: {borderColor: '#007AFF'},
-  checkWrapper: {position: 'absolute', top: -12, right: -12},
-  bestValueBanner: {
-    position: 'absolute',
-    top: 10,
-    right: -20,
-    backgroundColor: '#FFC107',
-    paddingHorizontal: 20,
-    paddingVertical: 4,
-    transform: [{rotate: '45deg'}],
-  },
-  bestValueText: {fontFamily: FontFamily.Bold, fontSize: 10, color: 'white'},
-  planTitle: {
-    fontFamily: FontFamily.Bold,
-    fontSize: 16,
-    color: '#0B3A4A',
-    marginBottom: 15,
-  },
-  featureItem: {flexDirection: 'row', alignItems: 'center', marginBottom: 8},
-  featureText: {fontFamily: FontFamily.Regular, fontSize: 12, color: '#333'},
-  featureUnavailable: {textDecorationLine: 'line-through', color: '#aaa'},
-  priceContainer: {
-    flexDirection: 'row',
-    alignItems: 'flex-start',
-    marginTop: 15,
-  },
-  priceCurrency: {
-    fontFamily: FontFamily.Bold,
-    fontSize: 14,
-    color: '#0B3A4A',
-    marginTop: 4,
-  },
-  priceAmount: {fontFamily: FontFamily.Bold, fontSize: 32, color: '#0B3A4A'},
-  priceCents: {
-    fontFamily: FontFamily.Bold,
-    fontSize: 14,
-    color: '#0B3A4A',
-    marginTop: 4,
-  },
-  priceNote: {
-    fontFamily: FontFamily.Regular,
-    fontSize: 12,
-    color: '#666',
-    alignSelf: 'flex-end',
-    marginLeft: 4,
-    marginBottom: 5,
-  },
-  monthlyEquivalent: {
-    fontFamily: FontFamily.Regular,
-    fontSize: 12,
-    color: '#007AFF',
-    marginTop: 4,
-  },
+
   sectionTitle: {
     fontFamily: FontFamily.Bold,
     fontSize: 18,
-    color: '#0B3A4A',
+    color: Colors.white,
     margin: 20,
     marginBottom: 10,
   },
-  reviewCard: {
-    backgroundColor: 'white',
-    borderRadius: 16,
-    padding: 15,
-    width: 300,
-    marginRight: 15,
-  },
-  reviewHeader: {flexDirection: 'row', alignItems: 'center', marginBottom: 10},
-  reviewAvatar: {width: 40, height: 40, borderRadius: 20, marginRight: 10},
-  reviewRating: {flexDirection: 'row', marginBottom: 2},
-  reviewName: {fontFamily: FontFamily.SemiBold, color: '#555'},
-  reviewDate: {
-    fontFamily: FontFamily.Regular,
-    color: '#aaa',
-    fontSize: 12,
-    marginLeft: 'auto',
-  },
-  reviewText: {
-    fontFamily: FontFamily.Regular,
-    color: '#333',
-    fontSize: 14,
-    lineHeight: 20,
-  },
-  ratingsContainer: {
-    alignItems: 'center',
-    marginVertical: 30,
-    paddingHorizontal: 20,
-  },
-  wreathImage: {
-    width: '100%',
-    height: 80,
-    resizeMode: 'contain',
-    position: 'absolute',
-    top: -15,
-  },
-  storesContainer: {flexDirection: 'row', zIndex: 1},
-  store: {alignItems: 'center', marginHorizontal: 20},
-  storeText: {
-    fontFamily: FontFamily.Bold,
-    fontSize: 10,
-    color: '#A2A2A2',
-    marginTop: 4,
-  },
-  stars: {flexDirection: 'row', marginVertical: 10},
-  statsContainer: {flexDirection: 'row', marginTop: 10},
-  statItem: {alignItems: 'center', marginHorizontal: 25},
-  statNumber: {fontFamily: FontFamily.Bold, fontSize: 20, color: '#0B3A4A'},
-  statLabel: {fontFamily: FontFamily.Regular, fontSize: 12, color: '#666'},
+
   footer: {
     padding: 20,
-    backgroundColor: 'white',
-    borderTopWidth: 1,
-    borderColor: '#eee',
+    // borderTopWidth: 1,
+    borderColor: Colors.grayVeryLight,
+    borderTopLeftRadius: 30,
+    borderTopRightRadius: 30,
+    shadowColor: Colors.white,
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+
+    elevation: 5,
   },
-  trialButton: {backgroundColor: '#007AFF'},
+  trialButton: {backgroundColor: Colors.accentOrange},
   purchasedButton: {backgroundColor: '#4CAF50', marginVertical: 12},
   purchasedButtonText: {color: 'white'},
   cancelText: {
@@ -182,4 +83,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default styles
+export default styles;
