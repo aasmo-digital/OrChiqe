@@ -6,7 +6,7 @@ import Icon from 'react-native-vector-icons/FontAwesome'; // For stars
 
 const PlansCard = ({plan, isSelected, onSelect}: any) => {
   const priceParts = plan.price.toFixed(2).toString().split('.');
-  
+
   return (
     <TouchableOpacity
       onPress={onSelect}
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 5,
     borderWidth: 1,
     borderColor: Colors.grayDark,
-    marginVertical:10
+    marginVertical: 10,
   },
   selectedPlanCard: {borderColor: Colors.accentOrange},
   checkWrapper: {position: 'absolute', top: -12, right: -12},

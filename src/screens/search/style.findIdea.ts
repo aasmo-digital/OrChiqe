@@ -28,16 +28,30 @@ const styles = StyleSheet.create({
   },
   tagsContainer: {flexDirection: 'row', flexWrap: 'wrap'},
   tag: {
-    backgroundColor: 'rgba(255,255,255,0.2)',
-    borderRadius: 8,
+    // backgroundColor: 'rgba(255,255,255,0.2)',
+    borderRadius: 300,
     paddingHorizontal: 14,
     paddingVertical: 8,
     marginRight: 10,
     marginBottom: 10,
+    borderWidth: 0.5,
+    borderColor: Colors.grayLight,
   },
-  tagSelected: {backgroundColor: '#F9A825'},
+  tagSelected: {
+    // backgroundColor: '#F9A825'
+    backgroundColor: 'rgba(255,255,255,0.2)',
+    shadowColor: Colors.white,
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+
+    elevation: 2,
+  },
   tagText: {fontFamily: FontFamily.SemiBold, color: Colors.white},
-  tagTextSelected: {color: Colors.black},
+  tagTextSelected: {color: Colors.white},
   bottomBar: {
     position: 'absolute',
     bottom: 0,

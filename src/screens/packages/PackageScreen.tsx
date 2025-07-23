@@ -34,7 +34,7 @@ const BenefitItem = ({text}: any) => (
 );
 
 // --- Main Screen Component ---
-const PackageScreen = ({navigation}) => {
+const PackageScreen = ({navigation}: any) => {
   const [selectedPlanId, setSelectedPlanId] = useState('ultimate');
 
   // const [selectedPlanId, setSelectedPlanId] = useState(null);
@@ -107,7 +107,7 @@ const PackageScreen = ({navigation}) => {
           title="Start 7-Day Free Trial"
           style={styles.trialButton}
           textStyle={{color: Colors.black}}
-          onPress={() => Alert.alert('----')}
+          onPress={() => navigation.navigate(ROUTE_NAMES.BOTTOMTABS)}
         />
         <ButtonCompt
           title="I've Already Purchased"

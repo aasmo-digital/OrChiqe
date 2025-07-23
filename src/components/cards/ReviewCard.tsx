@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     marginRight: 15,
     borderWidth: 0.5,
     borderColor: Colors.grayLight,
-    backgroundColor: Colors.primary,
+    backgroundColor: Colors.white,
     shadowColor: Colors.white,
     shadowOffset: {
       width: 0,
@@ -39,14 +39,13 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
-
     elevation: 5,
     marginVertical: 5,
   },
   reviewHeader: {flexDirection: 'row', alignItems: 'center', marginBottom: 10},
   reviewAvatar: {width: 40, height: 40, borderRadius: 20, marginRight: 10},
   reviewRating: {flexDirection: 'row', marginBottom: 2},
-  reviewName: {fontFamily: FontFamily.SemiBold, color: Colors.white},
+  reviewName: {fontFamily: FontFamily.SemiBold, color: Colors.black},
   reviewDate: {
     fontFamily: FontFamily.Regular,
     color: '#aaa',
@@ -55,7 +54,7 @@ const styles = StyleSheet.create({
   },
   reviewText: {
     fontFamily: FontFamily.Regular,
-    color: Colors.grayLight,
+    color: Colors.grayDark,
     fontSize: 14,
     lineHeight: 20,
   },

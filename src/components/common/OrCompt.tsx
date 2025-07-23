@@ -5,9 +5,9 @@ import {Colors, FontFamily} from '../../constants';
 const OrCompt = () => {
   return (
     <View style={{flexDirection: 'row', alignItems: 'center'}}>
-      <View style={{height: 0.5, backgroundColor: Colors.grayLight, flex: 1}} />
+      <View style={{height: 0.5, backgroundColor: Colors.black, flex: 1}} />
       <Text style={styles.orText}>OR</Text>
-      <View style={{height: 0.5, backgroundColor: Colors.grayLight, flex: 1}} />
+      <View style={{height: 0.5, backgroundColor: Colors.black, flex: 1}} />
     </View>
   );
 };
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
   orText: {
     fontFamily: FontFamily.SemiBold,
     fontSize: 14,
-    color: Colors.grayLight,
+    color: Colors.black,
     marginVertical: 16,
     paddingHorizontal: 5,
   },

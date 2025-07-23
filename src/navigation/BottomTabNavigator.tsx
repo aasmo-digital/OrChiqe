@@ -48,7 +48,6 @@
 
 // export default BottomTabNavigator;
 
-
 // navigation/BottomTabNavigator.js
 
 import React from 'react';
@@ -60,7 +59,6 @@ import ProfileScreen from '../screens/profile/ProfileScreen';
 import FindIdeasScreen from '../screens/search/FindIdeasScreen';
 import CustomBottomTab from '../components/common/CustomBottomTab';
 
- 
 const Tab = createBottomTabNavigator();
 
 const BottomTabNavigator = () => {
@@ -68,8 +66,9 @@ const BottomTabNavigator = () => {
     <Tab.Navigator
       screenOptions={{
         headerShown: false,
-       }}
-      tabBar={(props) => <CustomBottomTab {...props} />}>
+        tabBarHideOnKeyboard: true, // 👈 Add this line
+      }}
+      tabBar={props => <CustomBottomTab {...props} />}>
       <Tab.Screen name="Browse" component={BrowseScreen} />
       <Tab.Screen name="Library" component={LibraryScreen} />
       <Tab.Screen name="Search" component={FindIdeasScreen} />
@@ -79,4 +78,3 @@ const BottomTabNavigator = () => {
 };
 
 export default BottomTabNavigator;
-

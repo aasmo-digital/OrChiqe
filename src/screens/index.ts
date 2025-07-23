@@ -5,6 +5,12 @@ import SearchingActivitiesScreen from './searchingactivities/SearchingActivities
 import ActivitiesReadyScreen from './activitiesready/ActivitiesReadyScreen';
 import AlreadyAccount from './alreadyAccount/AlreadyAccount';
 import PackageScreen from './packages/PackageScreen';
+
+import CategoryList from './categoryList/CategoryList';
+
+import MyAccountScreen from './myAccountScreen/MyAccountScreen';
+import LegalInfoScreen from './legalInfoScreen/LegalInfoScreen';
+import SubscriptionScreen from './subscriptionScreen/SubscriptionScreen';
 export {
   SplashScreen,
   WelcomeScreen,
@@ -13,4 +19,8 @@ export {
   ActivitiesReadyScreen,
   AlreadyAccount,
   PackageScreen,
+  CategoryList,
+  MyAccountScreen,
+  LegalInfoScreen,
+  SubscriptionScreen,
 };

@@ -57,9 +57,9 @@ const WelcomeScreen = ({navigation}: any) => {
   const dotBlueUrl = 'https://cdn-icons-png.flaticon.com/512/5906/5906164.png';
 
   const Colors = {
-    primary: '#5c0984',
-    accentYellow: '#dcca06',
-    accentOrange: '#5c0984',
+    primary: '#0f52ba',
+    accentYellow: '#B9E5FF',
+    accentOrange: '#289FFF',
   };
 
   // useEffect(() => {

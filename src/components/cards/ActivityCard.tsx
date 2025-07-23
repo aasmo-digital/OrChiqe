@@ -10,7 +10,7 @@ import {
   Dimensions,
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient'; // Ensure installed
-import {FontFamily} from '../../constants';
+import {Colors, FontFamily} from '../../constants';
 
 const {width, height} = Dimensions.get('window');
 
@@ -58,6 +58,8 @@ const styles = StyleSheet.create({
     // elevation: 3,
     height: height / 4.8,
     width: width / 3.5,
+    borderWidth: 0.5,
+    borderColor: Colors.grayLight,
   },
   image: {
     // flex: 1,

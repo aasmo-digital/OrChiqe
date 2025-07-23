@@ -8,6 +8,8 @@ import ReviewCard from './cards/ReviewCard';
 import RatingsCard from './cards/RatingsCard';
 import PlansCard from './cards/PlansCard';
 import IdeaCard from './cards/IdeaCard';
+import HeaderCompt from './common/HeaderCompt';
+import SettingBtnCompt from './common/SettingBtnCompt';
 
 export {
   ActivityCard,
@@ -19,5 +21,7 @@ export {
   ReviewCard,
   RatingsCard,
   PlansCard,
-  IdeaCard
+  IdeaCard,
+  HeaderCompt,
+  SettingBtnCompt
 };

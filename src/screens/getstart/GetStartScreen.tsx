@@ -193,9 +193,9 @@ const GetStart = ({navigation}) => {
   };
 
   const colors = {
-    primary: '#5c0984',
-    accentYellow: '#dcca06',
-    accentOrange: '#5c0984',
+    primary: '#0f52ba',
+    accentYellow: '#B9E5FF',
+    accentOrange: '#289FFF',
   };
 
   const renderCurrentStep = () => {

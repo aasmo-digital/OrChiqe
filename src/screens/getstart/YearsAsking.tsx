@@ -228,7 +228,7 @@ const styles = StyleSheet.create({
   },
   list: {flexGrow: 1},
   item: {
-    backgroundColor: 'rgba(255,255,255,0.2)',
+    backgroundColor:'rgba(255,255,255,0.5)',
     borderRadius: 12,
     padding: 20,
     marginBottom: 15,

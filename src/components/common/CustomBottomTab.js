@@ -45,11 +45,11 @@ const CustomBottomTab = ({state, descriptors, navigation}) => {
             <Feather
               name={iconName}
               size={isFocused ? 26 : 22}
-              color={isFocused ? Colors.white : Colors.grayMedium}
+              color={isFocused ? Colors.white : Colors.grayLight}
             />
             <Text
               style={{
-                color: isFocused ? Colors.white : Colors.grayMedium,
+                color: isFocused ? Colors.white : Colors.grayLight,
                 fontSize: 12,
                 marginTop: 4,
               }}>

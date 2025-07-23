@@ -10,6 +10,7 @@ import {
 import Feather from 'react-native-vector-icons/Feather';
 import {Colors, FontFamily} from '../../constants';
 import styles from './profile.style';
+import { ROUTE_NAMES } from '../../constants/routes';
 
 // --- SUB-COMPONENT ---
 const ProfileRow = ({icon, text, onPress}) => (
@@ -43,7 +44,7 @@ const ProfileScreen = ({navigation}) => {
         {/* Menu */}
         <Text style={styles.sectionTitle}>My Profile</Text>
         <View style={styles.menuContainer}>
-          <ProfileRow
+          {/* <ProfileRow
             icon="award"
             text="Subscription"
             onPress={() => navigation.navigate('PakagesScreen')}
@@ -51,7 +52,24 @@ const ProfileScreen = ({navigation}) => {
           <ProfileRow icon="help-circle" text="Help & Support" />
           <ProfileRow icon="message-square" text="Feedback & Suggestions" />
           <ProfileRow icon="user" text="My Account" />
-          <ProfileRow icon="info" text="Legal Info" />
+          <ProfileRow icon="info" text="Legal Info" /> */}
+          <ProfileRow
+            icon="award"
+            text="Subscription"
+            onPress={() => navigation.navigate(ROUTE_NAMES.SUBSCRIPTION)}
+          />
+          <ProfileRow icon="help-circle" text="Help & Support" />
+          <ProfileRow icon="message-square" text="Feedback & Suggestions" />
+          <ProfileRow
+            icon="user"
+            text="My Account"
+            onPress={() => navigation.navigate(ROUTE_NAMES.MY_ACCOUNT)}
+          />
+          <ProfileRow
+            icon="info"
+            text="Legal Info"
+            onPress={() => navigation.navigate(ROUTE_NAMES.LEGAL_INFO)}
+          />
         </View>
       </ScrollView>
     </SafeAreaView>
